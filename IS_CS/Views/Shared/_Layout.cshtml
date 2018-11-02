@@ -33,7 +33,18 @@
                     @Html.ActionLink("C", "Index", "Home")
                 </div>
             </div>
-            @Html.ActionLink("Gedimai", "Index", "Home")
+            <div class="Nav_DropDown">
+                <button class="Drop_Bar">
+                    Remontas
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="DropDown_Content">
+                    @Html.ActionLink("Registruoti įrenginį", "Index", "Home")
+                    @Html.ActionLink("B", "Index", "Home")
+                    @Html.ActionLink("C", "Index", "Home")
+                </div>
+            </div>
+           
             @Html.ActionLink("Gražinimas", "Index", "Home")
         </div>
         <hr />
