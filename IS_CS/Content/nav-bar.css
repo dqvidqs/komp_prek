@@ -1,0 +1,79 @@
+﻿body {
+}
+
+.Nav_Header {
+    overflow: hidden;
+    background-color: #8e8e8e;
+}
+
+    .Nav_Header a {
+        float: left;
+        font-size: 20px;
+        color: white;
+        text-align: center;
+        padding: 16px 16px;
+        text-decoration: none;
+        border-right: 1px solid white;
+    }
+/*-------DrobDown-------*/
+.Nav_DropDown {
+    float: left;
+    overflow: hidden;
+    border-right: 1px solid white;
+}
+
+    .Nav_DropDown .Drop_Bar {
+        font-size: 20px;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 16px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+    }
+
+    .Nav_Header a:hover, .Nav_DropDown:hover .Drop_Bar {
+        background-color: #808080;
+    }
+
+.DropDown_Content {
+    display: none;
+    position: absolute;
+    background-color: #8e8e8e;
+    min-width: 300px;
+}
+
+    .DropDown_Content a {
+        float: none;
+        color: white;
+        padding: 16px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        border-bottom: 1px solid white;
+    }
+
+    .DropDown_Content:first-child a {
+        border-top: 1px solid white;
+    }
+
+    .DropDown_Content a:hover {
+        background-color: #808080;
+    }
+
+.Nav_DropDown:hover .DropDown_Content {
+    display: block;
+}
+
+/*-------Buttons-------*/
+.button {
+    background-color: #8e8e8e;
+    border: none;
+    color: white;
+    padding: 4px 6px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    height: 30px;
+}
