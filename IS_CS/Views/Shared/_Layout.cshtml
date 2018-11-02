@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Kompiuterių prekyba</title>
+    @Styles.Render("~/Content/nav-bar.css")
+    @Styles.Render("~/Content/div-con.css")
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+</head>
+<body>
+    <div class="container">
+        <div style="float:right; display:inline-block">
+            <div style="margin-top:40px;">
+                <a href="#" class="button">prisijungti</a>
+                <a href="#" class="button">registruotis</a>
+            </div>            
+        </div>
+        <div >
+            <i class="material-icons" style="font-size:60px; color:#8e8e8e">computer</i>
+        </div>
+        <div class="Nav_Header">
+            <div class="Nav_DropDown">
+                <button class="Drop_Bar">
+                    Kategorijos
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="DropDown_Content">
+                    @Html.ActionLink("A", "Index", "Home")
+                    @Html.ActionLink("B", "Index", "Home")
+                    @Html.ActionLink("C", "Index", "Home")
+                </div>
+            </div>
+            @Html.ActionLink("Gedimai", "Index", "Home")
+            @Html.ActionLink("Gražinimas", "Index", "Home")
+        </div>
+        <hr />
+    </div>
+    <div class="container" style="height:800px">
+        @RenderBody()
+    </div>
+
+    <div class="container">
+        <hr />
+        <footer>
+            <p style="text-align:center">&copy; @DateTime.Now.Year - Kompiuterių prekyba</p>
+        </footer>
+    </div>
+
+</body>
+</html>
