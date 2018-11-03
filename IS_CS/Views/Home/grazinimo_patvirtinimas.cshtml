@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Grąžinimo patvirtinimas";
+}
+<div>
+    <h2 id="pageTitle">Prekės grąžinimo patvirtinimas/būsenos keitimas:</h2>
+    <form action="#" method="get" id="patvirtinti">
+        <fieldset><legend>Prekės grąžinimo patvirtinimas:</legend>
+        Ar prekė gali būti grąžinta:<br>
+        <input type="radio" name="p" value="true" checked>Taip<br>
+        <input type="radio" name="p" value="false">Ne<br>
+    </form><br>
+    <button type="submit" form="patvirtinti" value="Submit">Išsaugoti</button></fieldset>
+				
+    <form action="#" method="get" id="busena">
+        <fieldset><legend>Prekės grąžinimo būsena:</legend>
+        <select>
+            <option value="pirmas">Laukiama patvirtinimo</option>
+            <option value="antras">Patvirtintas</option>
+            <option value="trecias">Vykdomas</option>
+            <option value="trecias" selected>Užbaigtas</option>
+            <option value="trecias">Atmestas</option>
+        </select><br><br>
+    </form><br>
+    <button type="submit" form="busena" value="Submit">Išsaugoti</button>
+</div>

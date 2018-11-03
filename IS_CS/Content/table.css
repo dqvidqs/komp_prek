@@ -1,0 +1,29 @@
+﻿body {
+}
+
+#formos {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+    #formos td, #formos th {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+
+    #formos tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    #formos tr:hover {
+        background-color: #ddd;
+    }
+
+    #formos th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #8e8e8e;
+        color: white;
+    }

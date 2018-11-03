@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Registracija grąžinimui";
+}
+<div>
+    <h2 id="pageTitle">Prekių registracija grąžinimui:</h2>
+    <form action="#" method="get" id="forma">
+        <fieldset>
+            <legend>Prekės grąžinimo forma:</legend>
+            Grąžinimo priežastis:<br>
+            <input type="radio" name="priezastis" value="bloga" checked> Boga kokybė<br>
+            <input type="radio" name="priezastis" value="neta"> Gauta ne ta prekė<br>
+            <input type="radio" name="priezastis" value="pazeista"> Pažeista prekė<br>
+            <input type="radio" name="priezastis" value="nemokamas"> Nemokamas 14d. grąžinimas<br><br>
+
+            Grąžinamas užsakymas:<br>
+            <select>
+                <option name="uzsakymas" value="pirmas">123</option>
+                <option name="uzsakymas" value="antras">124</option>
+                <option name="uzsakymas" value="trecias">125</option>
+            </select><br><br>
+
+            <label>Platesnis grąžinimo priežasties aprašymas:<br></label>
+        <textarea name="aprasymas" id="aprasymas" rows="6" cols="60" class="field-long field-textarea"></textarea>
+        </fieldset>
+    </form><br><br>
+    <button type="submit" form="forma" value="Submit">Pateikti</button>
+</div>

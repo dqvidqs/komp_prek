@@ -13,6 +13,23 @@ namespace IS_CS.Controllers
             return View();
         }
 
+        public ActionResult prekiu_grazinimas()
+        {
+            return View();
+        }
+        public ActionResult grazinimo_formos()
+        {
+            return View();
+        }
+        public ActionResult israsas()
+        {
+            return View();
+        }
+        public ActionResult grazinimo_patvirtinimas()
+        {
+            return View();
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

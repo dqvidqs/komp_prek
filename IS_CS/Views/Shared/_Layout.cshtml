@@ -45,8 +45,16 @@
                 </div>
             </div>
            
-            @Html.ActionLink("Grąžinimas", "Index", "Home")
-            <a href="#" class="material-icons" style="font-size:20px; color:white">add_shopping_cart</a>
+            <div class="Nav_DropDown">
+                <button class="Drop_Bar">
+                    Grąžinimas
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="DropDown_Content">
+                    @Html.ActionLink("Registracija grąžinimui", "prekiu_grazinimas", "Home")
+                    @Html.ActionLink("Grąžinimo formos", "grazinimo_formos", "Home")
+                </div>
+            </div>
 
         </div>
         <hr />

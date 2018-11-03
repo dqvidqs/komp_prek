@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Grąžinimo formos";
+}
+<div>
+    <h2 id="pageTitle">Grąžinimo formos:</h2>
+	            
+    <table style="width:100%" id="formos">
+        <tr>
+            <th>Nr.</th>
+            <th>Formos pateikimo data</th>
+            <th>Kliento vardas ir pavardė</th>
+            <th>Grąžinamas užsakymas</th>					
+            <th>Grąžinimo priežastis</th>
+            <th>Grąžinimo aprašymas</th>
+            <th>Grąžinimo būsena ir pakeitimo data</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2018-10-25</td> 
+            <td>Jonas Jonaitis</td>
+            <td>123</td>
+            <td>Bloga kokybė</td>
+            <td>Nepatiko kokybė</td>
+            <td>Užbaigtas, 2018-10-27</td>
+            <td>@Html.ActionLink("Išrašas", "israsas", "Home")</td>
+            <td>@Html.ActionLink("Patvirtinimas/Būsenos keitimas", "grazinimo_patvirtinimas", "Home")</td>
+        </tr>
+    </table>
+</div>
