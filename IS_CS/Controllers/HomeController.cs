@@ -29,7 +29,18 @@ namespace IS_CS.Controllers
         {
             return View();
         }
-
+        public ActionResult krepselio_perziura()
+        {
+            return View();
+        }
+        public ActionResult pristatymo_budai()
+        {
+            return View();
+        }
+        public ActionResult apmokejimo_budai()
+        {
+            return View();
+        }
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

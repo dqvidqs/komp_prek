@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "pristatymo_budai";
+}
+
+<h2>Pasirinktine pristatymo būdą</h2>
+
+<div>
+    <form action="#" method="get" id="patvirtinti">
+        <fieldset>
+            <legend><input type="radio" name="pristatyti" value="sandelys" checked> Atsimti sandelyje</legend>
+            Pasirinktite miestą: <br>
+            <select>
+                <option value="1" selected>Kaunas</option>
+                <option value="2">Vilnius</option>
+                <option value="3">Šiauliai</option>
+            </select><br><br>
+        </fieldset>
+        <fieldset>
+            <legend><input type="radio" name="pristatyti" value="kurjeris"> Atsimti per kurjerį</legend>
+            Pasirinktite miestą: 
+            <select>
+                <option value="1">Kaunas</option>
+                <option value="2">Vilnius</option>
+                <option value="3">Šiauliai</option>
+            </select> 
+            Nurodykite gatvę:
+            <input type="text" name="adresas">
+        </fieldset>
+        <fieldset>
+            <legend><input type="radio" name="pristatyti" value="savitarna" > Atsimti siuntų savitarnos terminale</legend>
+            Pasirinktite miestą:
+            <select>
+                <option value="1">Kaunas</option>
+                <option value="2">Vilnius</option>
+                <option value="3">Šiauliai</option>
+            </select>
+            Nurodykite adresą:
+            <input type="text" name="adresas">
+        </fieldset>
+        
+    </form><br>
+    <p>Sekančiame žingsnyje reikės pasirinkti mokėjimo būdą</p>
+    @*<button type="submit" form="patvirtinti" value="Submit">Tęsti</button>*@
+    <button>
+        @Html.ActionLink("Tęsti", "apmokejimo_budai", "Home")
+    </button>
+
+</div>

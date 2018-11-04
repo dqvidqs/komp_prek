@@ -6,6 +6,8 @@
     <title>@ViewBag.Title - Kompiuterių prekyba</title>
     @Styles.Render("~/Content/nav-bar.css")
     @Styles.Render("~/Content/div-con.css")
+    @Styles.Render("~/Content/table_cart.css")
+    @Styles.Render("~/Content/table.css")
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
@@ -55,7 +57,10 @@
                     @Html.ActionLink("Grąžinimo formos", "grazinimo_formos", "Home")
                 </div>
             </div>
-
+           
+                <a href="@Url.Action("krepselio_perziura", "Home")" class="mdc-button" style="float:right; font-size:40px; padding:4px 16px">
+                    <i class="material-icons" aria-hidden="true" >local_grocery_store</i>
+                </a>
         </div>
         <hr />
     </div>

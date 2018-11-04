@@ -1,0 +1,62 @@
+﻿
+@{
+    ViewBag.Title = "Krepšelio peržiūra";
+}
+
+<div class="container" style="height: 200px">
+    <h2>Krepšelio peržiūra</h2>
+
+    <table id="cartlist">
+
+        <tr>
+            <th>Prekė</th>
+            <th>Pavadinimas</th>
+            <th>Kaina</th>
+            <th>Kiekis</th>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <div class="container" style="height:200px; width:100%; overflow-y:scroll ">
+                    <table id="cartlist">
+                        <tr>
+                            <td><i class="material-icons" style="font-size:60px; color:#8e8e8e">computer</i></td>
+                            <td>Kompiuteris</td>
+                            <td>500.00 &euro;</td>
+                            <td><input type="number" name="quantity" min="1" max="10" value="1"></td>
+                        </tr>
+                        <tr>
+                            <td><i class="material-icons" style="font-size:60px; color:#8e8e8e">computer</i></td>
+                            <td>Kompiuteris</td>
+                            <td>500.00 &euro;</td>
+                            <td><input type="number" name="quantity" min="1" max="10" value="1"></td>
+                        </tr>
+                        <tr>
+                            <td><i class="material-icons" style="font-size:60px; color:#8e8e8e">computer</i></td>
+                            <td>Kompiuteris</td>
+                            <td>500.00 &euro;</td>
+                            <td><input type="number" name="quantity" min="1" max="10" value="1"></td>
+                        </tr>
+                        <tr>
+                            <td><i class="material-icons" style="font-size:60px; color:#8e8e8e">computer</i></td>
+                            <td>Kompiuteris</td>
+                            <td>500.00 &euro;</td>
+                            <td><input type="number" name="quantity" min="1" max="10" value="1"></td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <div>
+        <p>Jei yra visos reikiamos prekės, paspaudę mygtuką „Pirkti“ galėsite pasirinkti pristatymo ir apmokėjimo būdą</p>
+        <button>
+            @Html.ActionLink("Pirkti", "pristatymo_budai", "Home")
+        </button>
+
+
+    </div>
+
+</div>
+@*<div class="container" style="height:600px">
+        @RenderBody()
+    </div>*@

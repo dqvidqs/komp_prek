@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "apmokejimo_budai";
+}
+
+<h2>Pasirinktite mokėjimo būdą</h2>
+<div>
+    <form action="#" method="get" id="patvirtinti">
+        <fieldset>
+            <legend><input type="radio" name="moketi" value="atsiimant" checked> Mokėti atsiimant prekes</legend>
+            <p>Pasirinkus galima patvirtinti pirkimą</p>
+            <i class="material-icons"> done_outline</i>
+        </fieldset>
+        <fieldset>
+            <legend><input type="radio" name="moketi" value="pavedimu"> Mokėti pavedimu</legend>
+            Pasirinktite banką:<br>
+            <input type="radio" name="bankas" value="b1"><i class="material-icons">description</i> <br>
+            <input type="radio" name="bankas" value="b2"><i class="material-icons">description</i><br>
+            <input type="radio" name="bankas" value="b3"><i class="material-icons">description</i><br>
+            <input type="radio" name="bankas" value="b4"><i class="material-icons">description</i><br>
+        </fieldset>
+        <fieldset>
+            <legend><input type="radio" name="moketi" value="savitarna"> Atsiimti siuntų savitarnos terminale</legend>
+            Pasirinktite miestą:
+            <select>
+                <option value="1">Kaunas</option>
+                <option value="2">Vilnius</option>
+                <option value="3">Šiauliai</option>
+            </select>
+            Nurodykite adresą:
+            <input type="text" name="adresas">
+        </fieldset>
+        <fieldset>
+            <legend><input type="radio" name="moketi" value="savitarna"> Elektroninė bankininkystė</legend>
+            Pasirinktite banką:<br>
+            <input type="radio" name="bankas" value="b1"><i class="material-icons" style="font-size:80px">credit_card</i>
+            <input type="radio" name="bankas" value="b2"><i class="material-icons" style="font-size:80px">credit_card</i><br>
+            <input type="radio" name="bankas" value="b3"><i class="material-icons" style="font-size:80px">credit_card</i>
+            <input type="radio" name="bankas" value="b4"><i class="material-icons" style="font-size:80px">credit_card</i><br>
+        </fieldset>
+    </form><br>
+    <button type="submit" form="patvirtinti" value="Submit">Patvirtinti</button>
+</div>
+

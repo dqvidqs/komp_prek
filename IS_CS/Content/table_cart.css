@@ -1,0 +1,28 @@
+﻿body {
+}
+#cartlist {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    table-layout:fixed;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#cartlist td, #cartlist th {
+    border: none;
+    text-align: center;
+    width:25%;
+    padding: 1px;
+}
+
+#cartlist tr:nth-child(even){background-color: #f2f2f2;}
+
+#cartlist tr:hover {background-color: #ddd;}
+
+#cartlist th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    width:25%;
+    background-color: #4800ff;
+    color: white;
+}
