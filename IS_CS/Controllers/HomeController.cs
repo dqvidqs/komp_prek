@@ -41,6 +41,7 @@ namespace IS_CS.Controllers
         {
             return View();
         }
+
         public ActionResult registruoti_irengini()
         {
             return View();
@@ -57,17 +58,24 @@ namespace IS_CS.Controllers
         {
             return View();
         }
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
+        public ActionResult About() {
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult prekiu_sarasas()
         {
-            ViewBag.Message = "Your contact page.";
-
+            return View();
+        }
+        public ActionResult saskaitu_sarasas()
+        {
+            return View();
+        }
+        public ActionResult preke_keitimas()
+        {
+            return View();
+        }
+        public ActionResult preke_nauja()
+        {
             return View();
         }
     }

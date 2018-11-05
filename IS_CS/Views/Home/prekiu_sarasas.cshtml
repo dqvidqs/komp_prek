@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Prekių sąrašas";
+}
+<div>
+    @Html.ActionLink("+ Prekė", "preke_nauja", "Home")
+    <br />
+</div>
+<div>
+    <table style="width:100%; color:#8e8e8e" id="formos">
+        <tr>
+            <th>Bar kodas</th>
+            <th>Modelis</th>
+            <th>Pavadinimas</th>
+            <th>Kaina, €</th>
+            <th>Sandelyje</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td>7484161626497</td>
+            <td>Asus</td>
+            <td>X441NA-GA190</td>
+            <td>800</td>
+            <td>3</td>
+            <td style="text-align:right;">
+                @Html.ActionLink("Redaguoti", "preke_keitimas", "Home")<a>  </a>
+                        @Html.ActionLink("Šalinti", "preke_", "Home")
+                    </td>
+        </tr>
+    </table>
+</div>
