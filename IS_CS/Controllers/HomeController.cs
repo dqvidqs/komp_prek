@@ -41,17 +41,20 @@ namespace IS_CS.Controllers
         {
             return View();
         }
-        public ActionResult About()
+        public ActionResult prekiu_sarasas()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
-
-        public ActionResult Contact()
+        public ActionResult saskaitu_sarasas()
         {
-            ViewBag.Message = "Your contact page.";
-
+            return View();
+        }
+        public ActionResult preke_keitimas()
+        {
+            return View();
+        }
+        public ActionResult preke_nauja()
+        {
             return View();
         }
     }
