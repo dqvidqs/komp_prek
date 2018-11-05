@@ -46,7 +46,7 @@
                     @Html.ActionLink("C", "Index", "Home")
                 </div>
             </div>
-           
+
             <div class="Nav_DropDown">
                 <button class="Drop_Bar">
                     Grąžinimas
@@ -57,14 +57,16 @@
                     @Html.ActionLink("Grąžinimo formos", "grazinimo_formos", "Home")
                 </div>
             </div>
-           
-                <a href="@Url.Action("krepselio_perziura", "Home")" class="mdc-button" style="float:right; font-size:40px; padding:4px 16px">
-                    <i class="material-icons" aria-hidden="true" >local_grocery_store</i>
-                </a>
+            @Html.ActionLink("Prekės", "prekiu_sarasas", "Home")
+            @Html.ActionLink("Sąskaitos", "saskaitu_sarasas", "Home")
+
+            <a href="@Url.Action("krepselio_perziura", "Home")" class="mdc-button" style="float:right; font-size:40px; padding:4px 16px">
+                <i class="material-icons" aria-hidden="true">local_grocery_store</i>
+            </a>
         </div>
         <hr />
     </div>
-    <div class="container" style="height:800px">
+    <div class="container">
         @RenderBody()
     </div>
 
