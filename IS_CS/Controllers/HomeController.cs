@@ -41,6 +41,22 @@ namespace IS_CS.Controllers
         {
             return View();
         }
+        public ActionResult registruoti_irengini()
+        {
+            return View();
+        }
+        public ActionResult irenginio_ataskaita()
+        {
+            return View();
+        }
+        public ActionResult kliento_informacija()
+        {
+            return View();
+        }
+        public ActionResult gedimu_istorija()
+        {
+            return View();
+        }
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";

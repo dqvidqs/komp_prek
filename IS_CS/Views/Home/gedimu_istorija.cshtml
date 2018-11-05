@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "gedimu_istorija";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <h2 id="pageTitle">Gedimų istorijos sąrašas:</h2>
+
+    <table style="width:100%" id="formos">
+        <tr>
+            <th>Tipas</th>
+            <th>Būsena</th>
+            <th>Pataisymo data</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td>Iskilęs ekranas</td>
+            <td>sutaisytas</td>
+            <td>2018-09-08</td>
+            <td>@Html.ActionLink("Keisti", "gedimu_istorija", "Home")</td>
+        </tr>
+        <tr>
+            <td>Uzstrigęs mygtukas</td>
+            <td>taisoma</td>
+            <td>null</td>
+            <td>@Html.ActionLink("Keisti", "gedimu_istorija", "Home")</td>
+        </tr>
+    </table>
+</div>

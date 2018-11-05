@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "registruoti_irengini";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <h2 id="pageTitle">Įrenginio registracija:</h2>
+    <form action="#" method="get" id="forma">
+        <fieldset>
+            <legend>Įrenginio registracijos forma:</legend>
+            Įrenginio pavadinimas:<br>
+            <input type="text" name="irenginio_pavadinimas"><br><br>
+            Įrenginio modelis:<br>
+            <input type="text" name="irenginio_modelis"><br><br>
+            Pridavimo data:<br />
+            <input type="date" name="pridavimo_data"><br><br>
+            Atsiemimo data:<br />
+            <input type="date" name="atsiemimo_data"><br><br>
+            Būsena:<br />
+            <select name="busena">
+
+                <option value="remontuojamas">Remontuojamas</option>
+
+                <option value="suremontuotas">Suremontuotas</option>
+
+                <option value="grazinas_klientui">Grąžintas klientui</option>
+                <option value="primtas_is_kliento">Priimtas</option>
+
+            </select><br /><br>
+
+            Garantijos pabaigos data:<br />
+            <input type="date" name="garantijos_pabaigos_data"><br><br>
+
+            Kliento paskyros identifikacinis kodas:<br>
+            <input type="text" name="kliento_id"><br><br>
+
+          
+        </fieldset>
+    </form><br>
+    <button type="submit" form="forma" value="Submit">Pateikti</button>
+</div>
+
