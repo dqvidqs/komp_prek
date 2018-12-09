@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="is_kpModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Darbuotojas">
+    <Key>
+      <PropertyRef Name="paskyros_id" />
+    </Key>
+    <Property Name="paskyros_id" Type="int" Nullable="false" />
+    <Property Name="prisjungimas" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="slaptazodis" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="vardas" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="pavarde" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="el_pastas" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="tel_nr" Type="varchar" MaxLength="11" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Gedimo_busena">
+    <Key>
+      <PropertyRef Name="id_Gedimo_busena" />
+    </Key>
+    <Property Name="id_Gedimo_busena" Type="int" Nullable="false" />
+    <Property Name="name" Type="char" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Grazinimo_busena">
+    <Key>
+      <PropertyRef Name="busena" />
+    </Key>
+    <Property Name="busena" Type="int" Nullable="false" />
+    <Property Name="busenos_pakeitimo_data" Type="date" Nullable="false" />
+    <Property Name="fk_grazinimo_busena" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Grazinimo_busenos">
+    <Key>
+      <PropertyRef Name="id_Grazinimo_busena" />
+    </Key>
+    <Property Name="id_Grazinimo_busena" Type="int" Nullable="false" />
+    <Property Name="name" Type="char" MaxLength="21" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Grazinimo_priezastis">
+    <Key>
+      <PropertyRef Name="id_Grazinimo_priezastis" />
+    </Key>
+    <Property Name="id_Grazinimo_priezastis" Type="int" Nullable="false" />
+    <Property Name="name" Type="char" MaxLength="25" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Irenginio_busena">
+    <Key>
+      <PropertyRef Name="id_Irenginio_busena" />
+    </Key>
+    <Property Name="id_Irenginio_busena" Type="int" Nullable="false" />
+    <Property Name="name" Type="char" MaxLength="19" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Kategorija">
+    <Key>
+      <PropertyRef Name="kategorijos_id" />
+    </Key>
+    <Property Name="kategorijos_id" Type="int" Nullable="false" />
+    <Property Name="pavadinimas" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Kiekio_tipas">
+    <Key>
+      <PropertyRef Name="id_Kiekio_tipas" />
+    </Key>
+    <Property Name="id_Kiekio_tipas" Type="int" Nullable="false" />
+    <Property Name="name" Type="char" MaxLength="3" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Mokejimo_budas">
+    <Key>
+      <PropertyRef Name="id_Mokejimo_budas" />
+    </Key>
+    <Property Name="id_Mokejimo_budas" Type="int" Nullable="false" />
+    <Property Name="name" Type="char" MaxLength="16" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Preke">
+    <Key>
+      <PropertyRef Name="bar_kodas" />
+    </Key>
+    <Property Name="bar_kodas" Type="int" Nullable="false" />
+    <Property Name="modelis" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="pavadinimas" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="pardavimo_kaina" Type="float" Nullable="false" />
+    <Property Name="kiekio_tipas" Type="int" Nullable="false" />
+    <Property Name="fk_Darbuotojaspaskyros_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Prekiu_krepselis">
+    <Key>
+      <PropertyRef Name="prekiu_krepselio_id" />
+    </Key>
+    <Property Name="prekiu_krepselio_id" Type="int" Nullable="false" />
+    <Property Name="kiekis" Type="int" Nullable="false" />
+    <Property Name="fk_Prekebar_kodas" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="priklauso">
+    <Key>
+      <PropertyRef Name="fk_Prekebar_kodas" />
+      <PropertyRef Name="fk_Kategorijakategorijos_id" />
+    </Key>
+    <Property Name="fk_Prekebar_kodas" Type="int" Nullable="false" />
+    <Property Name="fk_Kategorijakategorijos_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Pristatymo_budai">
+    <Key>
+      <PropertyRef Name="pristatymo_id" />
+    </Key>
+    <Property Name="pristatymo_id" Type="int" Nullable="false" />
+    <Property Name="pavadinimas" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="kaina" Type="float" Nullable="false" />
+    <Property Name="trukme" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <Association Name="FK__Grazinimo__fk_gr__34C8D9D1">
+    <End Role="Grazinimo_busenos" Type="Self.Grazinimo_busenos" Multiplicity="1" />
+    <End Role="Grazinimo_busena" Type="Self.Grazinimo_busena" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Grazinimo_busenos">
+        <PropertyRef Name="id_Grazinimo_busena" />
+      </Principal>
+      <Dependent Role="Grazinimo_busena">
+        <PropertyRef Name="fk_grazinimo_busena" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Preke__kiekio_ti__37A5467C">
+    <End Role="Kiekio_tipas" Type="Self.Kiekio_tipas" Multiplicity="1" />
+    <End Role="Preke" Type="Self.Preke" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kiekio_tipas">
+        <PropertyRef Name="id_Kiekio_tipas" />
+      </Principal>
+      <Dependent Role="Preke">
+        <PropertyRef Name="kiekio_tipas" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Prekiu_kr__fk_Pr__3C69FB99">
+    <End Role="Preke" Type="Self.Preke" Multiplicity="1" />
+    <End Role="Prekiu_krepselis" Type="Self.Prekiu_krepselis" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Preke">
+        <PropertyRef Name="bar_kodas" />
+      </Principal>
+      <Dependent Role="Prekiu_krepselis">
+        <PropertyRef Name="fk_Prekebar_kodas" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="perziuri">
+    <End Role="Darbuotojas" Type="Self.Darbuotojas" Multiplicity="1" />
+    <End Role="Preke" Type="Self.Preke" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Darbuotojas">
+        <PropertyRef Name="paskyros_id" />
+      </Principal>
+      <Dependent Role="Preke">
+        <PropertyRef Name="fk_Darbuotojaspaskyros_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="priklausyti">
+    <End Role="Preke" Type="Self.Preke" Multiplicity="1" />
+    <End Role="priklauso" Type="Self.priklauso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Preke">
+        <PropertyRef Name="bar_kodas" />
+      </Principal>
+      <Dependent Role="priklauso">
+        <PropertyRef Name="fk_Prekebar_kodas" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="is_kpModelStoreContainer">
+    <EntitySet Name="Darbuotojas" EntityType="Self.Darbuotojas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Gedimo_busena" EntityType="Self.Gedimo_busena" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Grazinimo_busena" EntityType="Self.Grazinimo_busena" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Grazinimo_busenos" EntityType="Self.Grazinimo_busenos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Grazinimo_priezastis" EntityType="Self.Grazinimo_priezastis" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Irenginio_busena" EntityType="Self.Irenginio_busena" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Kategorija" EntityType="Self.Kategorija" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Kiekio_tipas" EntityType="Self.Kiekio_tipas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Mokejimo_budas" EntityType="Self.Mokejimo_budas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Preke" EntityType="Self.Preke" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Prekiu_krepselis" EntityType="Self.Prekiu_krepselis" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="priklauso" EntityType="Self.priklauso" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Pristatymo_budai" EntityType="Self.Pristatymo_budai" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Grazinimo__fk_gr__34C8D9D1" Association="Self.FK__Grazinimo__fk_gr__34C8D9D1">
+      <End Role="Grazinimo_busenos" EntitySet="Grazinimo_busenos" />
+      <End Role="Grazinimo_busena" EntitySet="Grazinimo_busena" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Preke__kiekio_ti__37A5467C" Association="Self.FK__Preke__kiekio_ti__37A5467C">
+      <End Role="Kiekio_tipas" EntitySet="Kiekio_tipas" />
+      <End Role="Preke" EntitySet="Preke" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Prekiu_kr__fk_Pr__3C69FB99" Association="Self.FK__Prekiu_kr__fk_Pr__3C69FB99">
+      <End Role="Preke" EntitySet="Preke" />
+      <End Role="Prekiu_krepselis" EntitySet="Prekiu_krepselis" />
+    </AssociationSet>
+    <AssociationSet Name="perziuri" Association="Self.perziuri">
+      <End Role="Darbuotojas" EntitySet="Darbuotojas" />
+      <End Role="Preke" EntitySet="Preke" />
+    </AssociationSet>
+    <AssociationSet Name="priklausyti" Association="Self.priklausyti">
+      <End Role="Preke" EntitySet="Preke" />
+      <End Role="priklauso" EntitySet="priklauso" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

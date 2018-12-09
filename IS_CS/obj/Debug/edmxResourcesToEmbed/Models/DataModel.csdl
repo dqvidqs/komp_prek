@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="is_kpModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Darbuotoja">
+    <Key>
+      <PropertyRef Name="paskyros_id" />
+    </Key>
+    <Property Name="paskyros_id" Type="Int32" Nullable="false" />
+    <Property Name="prisjungimas" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="slaptazodis" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="vardas" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="pavarde" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="el_pastas" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="tel_nr" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Prekes" Relationship="Self.perziuri" FromRole="Darbuotojas" ToRole="Preke" />
+  </EntityType>
+  <EntityType Name="Gedimo_busena">
+    <Key>
+      <PropertyRef Name="id_Gedimo_busena" />
+    </Key>
+    <Property Name="id_Gedimo_busena" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Grazinimo_busena">
+    <Key>
+      <PropertyRef Name="busena" />
+    </Key>
+    <Property Name="busena" Type="Int32" Nullable="false" />
+    <Property Name="busenos_pakeitimo_data" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="fk_grazinimo_busena" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Grazinimo_busenos" Relationship="Self.FK__Grazinimo__fk_gr__34C8D9D1" FromRole="Grazinimo_busena" ToRole="Grazinimo_busenos" />
+  </EntityType>
+  <EntityType Name="Grazinimo_busenos">
+    <Key>
+      <PropertyRef Name="id_Grazinimo_busena" />
+    </Key>
+    <Property Name="id_Grazinimo_busena" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="21" FixedLength="true" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Grazinimo_busena" Relationship="Self.FK__Grazinimo__fk_gr__34C8D9D1" FromRole="Grazinimo_busenos" ToRole="Grazinimo_busena" />
+  </EntityType>
+  <EntityType Name="Grazinimo_priezastis">
+    <Key>
+      <PropertyRef Name="id_Grazinimo_priezastis" />
+    </Key>
+    <Property Name="id_Grazinimo_priezastis" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="25" FixedLength="true" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Irenginio_busena">
+    <Key>
+      <PropertyRef Name="id_Irenginio_busena" />
+    </Key>
+    <Property Name="id_Irenginio_busena" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="19" FixedLength="true" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Kategorija">
+    <Key>
+      <PropertyRef Name="kategorijos_id" />
+    </Key>
+    <Property Name="kategorijos_id" Type="Int32" Nullable="false" />
+    <Property Name="pavadinimas" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Kiekio_tipas">
+    <Key>
+      <PropertyRef Name="id_Kiekio_tipas" />
+    </Key>
+    <Property Name="id_Kiekio_tipas" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Prekes" Relationship="Self.FK__Preke__kiekio_ti__37A5467C" FromRole="Kiekio_tipas" ToRole="Preke" />
+  </EntityType>
+  <EntityType Name="Mokejimo_budas">
+    <Key>
+      <PropertyRef Name="id_Mokejimo_budas" />
+    </Key>
+    <Property Name="id_Mokejimo_budas" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="16" FixedLength="true" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Preke">
+    <Key>
+      <PropertyRef Name="bar_kodas" />
+    </Key>
+    <Property Name="bar_kodas" Type="Int32" Nullable="false" />
+    <Property Name="modelis" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="pavadinimas" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="pardavimo_kaina" Type="Double" Nullable="false" />
+    <Property Name="kiekio_tipas" Type="Int32" Nullable="false" />
+    <Property Name="fk_Darbuotojaspaskyros_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Darbuotoja" Relationship="Self.perziuri" FromRole="Preke" ToRole="Darbuotojas" />
+    <NavigationProperty Name="Kiekio_tipas1" Relationship="Self.FK__Preke__kiekio_ti__37A5467C" FromRole="Preke" ToRole="Kiekio_tipas" />
+    <NavigationProperty Name="Prekiu_krepselis" Relationship="Self.FK__Prekiu_kr__fk_Pr__3C69FB99" FromRole="Preke" ToRole="Prekiu_krepselis" />
+    <NavigationProperty Name="priklausoes" Relationship="Self.priklausyti" FromRole="Preke" ToRole="priklauso" />
+  </EntityType>
+  <EntityType Name="Prekiu_krepselis">
+    <Key>
+      <PropertyRef Name="prekiu_krepselio_id" />
+    </Key>
+    <Property Name="prekiu_krepselio_id" Type="Int32" Nullable="false" />
+    <Property Name="kiekis" Type="Int32" Nullable="false" />
+    <Property Name="fk_Prekebar_kodas" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Preke" Relationship="Self.FK__Prekiu_kr__fk_Pr__3C69FB99" FromRole="Prekiu_krepselis" ToRole="Preke" />
+  </EntityType>
+  <EntityType Name="priklauso">
+    <Key>
+      <PropertyRef Name="fk_Prekebar_kodas" />
+      <PropertyRef Name="fk_Kategorijakategorijos_id" />
+    </Key>
+    <Property Name="fk_Prekebar_kodas" Type="Int32" Nullable="false" />
+    <Property Name="fk_Kategorijakategorijos_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Preke" Relationship="Self.priklausyti" FromRole="priklauso" ToRole="Preke" />
+  </EntityType>
+  <EntityType Name="Pristatymo_budai">
+    <Key>
+      <PropertyRef Name="pristatymo_id" />
+    </Key>
+    <Property Name="pristatymo_id" Type="Int32" Nullable="false" />
+    <Property Name="pavadinimas" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="kaina" Type="Double" Nullable="false" />
+    <Property Name="trukme" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="perziuri">
+    <End Role="Darbuotojas" Type="Self.Darbuotoja" Multiplicity="1" />
+    <End Role="Preke" Type="Self.Preke" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Darbuotojas">
+        <PropertyRef Name="paskyros_id" />
+      </Principal>
+      <Dependent Role="Preke">
+        <PropertyRef Name="fk_Darbuotojaspaskyros_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Grazinimo__fk_gr__34C8D9D1">
+    <End Role="Grazinimo_busenos" Type="Self.Grazinimo_busenos" Multiplicity="1" />
+    <End Role="Grazinimo_busena" Type="Self.Grazinimo_busena" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Grazinimo_busenos">
+        <PropertyRef Name="id_Grazinimo_busena" />
+      </Principal>
+      <Dependent Role="Grazinimo_busena">
+        <PropertyRef Name="fk_grazinimo_busena" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Preke__kiekio_ti__37A5467C">
+    <End Role="Kiekio_tipas" Type="Self.Kiekio_tipas" Multiplicity="1" />
+    <End Role="Preke" Type="Self.Preke" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kiekio_tipas">
+        <PropertyRef Name="id_Kiekio_tipas" />
+      </Principal>
+      <Dependent Role="Preke">
+        <PropertyRef Name="kiekio_tipas" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Prekiu_kr__fk_Pr__3C69FB99">
+    <End Role="Preke" Type="Self.Preke" Multiplicity="1" />
+    <End Role="Prekiu_krepselis" Type="Self.Prekiu_krepselis" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Preke">
+        <PropertyRef Name="bar_kodas" />
+      </Principal>
+      <Dependent Role="Prekiu_krepselis">
+        <PropertyRef Name="fk_Prekebar_kodas" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="priklausyti">
+    <End Role="Preke" Type="Self.Preke" Multiplicity="1" />
+    <End Role="priklauso" Type="Self.priklauso" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Preke">
+        <PropertyRef Name="bar_kodas" />
+      </Principal>
+      <Dependent Role="priklauso">
+        <PropertyRef Name="fk_Prekebar_kodas" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="is_kpEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Darbuotojas" EntityType="Self.Darbuotoja" />
+    <EntitySet Name="Gedimo_busena" EntityType="Self.Gedimo_busena" />
+    <EntitySet Name="Grazinimo_busena" EntityType="Self.Grazinimo_busena" />
+    <EntitySet Name="Grazinimo_busenos" EntityType="Self.Grazinimo_busenos" />
+    <EntitySet Name="Grazinimo_priezastis" EntityType="Self.Grazinimo_priezastis" />
+    <EntitySet Name="Irenginio_busena" EntityType="Self.Irenginio_busena" />
+    <EntitySet Name="Kategorijas" EntityType="Self.Kategorija" />
+    <EntitySet Name="Kiekio_tipas" EntityType="Self.Kiekio_tipas" />
+    <EntitySet Name="Mokejimo_budas" EntityType="Self.Mokejimo_budas" />
+    <EntitySet Name="Prekes" EntityType="Self.Preke" />
+    <EntitySet Name="Prekiu_krepselis" EntityType="Self.Prekiu_krepselis" />
+    <EntitySet Name="priklausoes" EntityType="Self.priklauso" />
+    <EntitySet Name="Pristatymo_budai" EntityType="Self.Pristatymo_budai" />
+    <AssociationSet Name="perziuri" Association="Self.perziuri">
+      <End Role="Darbuotojas" EntitySet="Darbuotojas" />
+      <End Role="Preke" EntitySet="Prekes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Grazinimo__fk_gr__34C8D9D1" Association="Self.FK__Grazinimo__fk_gr__34C8D9D1">
+      <End Role="Grazinimo_busenos" EntitySet="Grazinimo_busenos" />
+      <End Role="Grazinimo_busena" EntitySet="Grazinimo_busena" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Preke__kiekio_ti__37A5467C" Association="Self.FK__Preke__kiekio_ti__37A5467C">
+      <End Role="Kiekio_tipas" EntitySet="Kiekio_tipas" />
+      <End Role="Preke" EntitySet="Prekes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Prekiu_kr__fk_Pr__3C69FB99" Association="Self.FK__Prekiu_kr__fk_Pr__3C69FB99">
+      <End Role="Preke" EntitySet="Prekes" />
+      <End Role="Prekiu_krepselis" EntitySet="Prekiu_krepselis" />
+    </AssociationSet>
+    <AssociationSet Name="priklausyti" Association="Self.priklausyti">
+      <End Role="Preke" EntitySet="Prekes" />
+      <End Role="priklauso" EntitySet="priklausoes" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
