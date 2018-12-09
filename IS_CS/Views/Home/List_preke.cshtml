@@ -1,0 +1,64 @@
+﻿@model IEnumerable<IS_CS.Models.Preke>
+
+@{
+    ViewBag.Title = "List_preke";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>List_preke</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.bar_kodas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.modelis)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pavadinimas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pardavimo_kaina)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.kiekio_tipas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fk_Darbuotojaspaskyros_id)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.bar_kodas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.modelis)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pavadinimas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pardavimo_kaina)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.kiekio_tipas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fk_Darbuotojaspaskyros_id)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
