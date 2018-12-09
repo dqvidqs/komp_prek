@@ -56,6 +56,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -155,12 +157,93 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\prekeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\preke.cs" />
-    <Compile Include="Models\prekeContext.cs" />
+    <Compile Include="Models\Darbuotoja.cs">
+      <DependentUpon>ModelData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Gedima.cs">
+      <DependentUpon>ModelData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Gedimo_busena.cs">
+      <DependentUpon>ModelData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Grazinima.cs">
+      <DependentUpon>ModelData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Grazinimo_busena.cs">
+      <DependentUpon>ModelData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Grazinimo_busenos.cs">
+      <DependentUpon>ModelData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Grazinimo_priezastis.cs">
+      <DependentUpon>ModelData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Irenginio_busena.cs">
+      <DependentUpon>ModelData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Israsa.cs">
+      <DependentUpon>ModelData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\itraukiama_i.cs">
+      <DependentUpon>ModelData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Kategorija.cs">
+      <DependentUpon>ModelData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Kiekio_tipas.cs">
+      <DependentUpon>ModelData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Klienta.cs">
+      <DependentUpon>ModelData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelData.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelData.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelData.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelData.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Mokejimo_budas.cs">
+      <DependentUpon>ModelData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Patvirtinima.cs">
+      <DependentUpon>ModelData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Preke.cs">
+      <DependentUpon>ModelData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Prekiu_krepselis.cs">
+      <DependentUpon>ModelData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Prekiu_sarasas.cs">
+      <DependentUpon>ModelData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\priklauso.cs">
+      <DependentUpon>ModelData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Pristatymo_budai.cs">
+      <DependentUpon>ModelData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Remontuojamas_irenginys.cs">
+      <DependentUpon>ModelData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Saskaita.cs">
+      <DependentUpon>ModelData.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Uzsakyma.cs">
+      <DependentUpon>ModelData.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -175,6 +258,16 @@
     <Content Include="Global.asax" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Models\ModelData.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelData.edmx</DependentUpon>
+      <LastGenOutput>ModelData.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\ModelData.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelData.edmx</DependentUpon>
+      <LastGenOutput>ModelData.cs</LastGenOutput>
     </Content>
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -199,12 +292,22 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <EntityDeploy Include="Models\ModelData.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelData.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\ModelData.edmx.diagram">
+      <DependentUpon>ModelData.edmx</DependentUpon>
+    </Content>
     <None Include="packages.config" />
     <Content Include="Views\Home\registruoti_irengini.cshtml" />
     <Content Include="Views\Home\irenginio_ataskaita.cshtml" />
     <Content Include="Views\Home\kliento_informacija.cshtml" />
     <Content Include="Views\Home\gedimu_istorija.cshtml" />
-    <Content Include="Views\preke\List.cshtml" />
+    <Content Include="Views\Home\List_preke.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
