@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b9a1900fc1e64cef9c14bd4f4107361d" Name="Diagram1">
+        <EntityTypeShape EntityType="is_kpModel.Darbuotoja" Width="1.5" PointX="0.75" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="is_kpModel.Gedimo_busena" Width="1.5" PointX="5.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="is_kpModel.Grazinimo_busena" Width="1.5" PointX="3" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="is_kpModel.Grazinimo_busenos" Width="1.5" PointX="0.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="is_kpModel.Grazinimo_priezastis" Width="1.5" PointX="7.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="is_kpModel.Irenginio_busena" Width="2.625" PointX="11" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="is_kpModel.Kategorija" Width="1.5" PointX="8.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="is_kpModel.Kiekio_tipas" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="is_kpModel.Mokejimo_budas" Width="1.5" PointX="9.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="is_kpModel.Preke" Width="1.5" PointX="3" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="is_kpModel.Prekiu_krepselis" Width="1.5" PointX="5.25" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="is_kpModel.priklauso" Width="2.25" PointX="5.625" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="is_kpModel.Pristatymo_budai" Width="1.5" PointX="0.75" PointY="11.25" IsExpanded="true" />
+        <AssociationConnector Association="is_kpModel.perziuri" ManuallyRouted="false" />
+        <AssociationConnector Association="is_kpModel.FK__Grazinimo__fk_gr__34C8D9D1" ManuallyRouted="false" />
+        <AssociationConnector Association="is_kpModel.FK__Preke__kiekio_ti__37A5467C" ManuallyRouted="false" />
+        <AssociationConnector Association="is_kpModel.FK__Prekiu_kr__fk_Pr__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="is_kpModel.priklausyti" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

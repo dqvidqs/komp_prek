@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using IS_CS.Models;
 
 namespace IS_CS.Controllers
 {
@@ -77,6 +78,13 @@ namespace IS_CS.Controllers
         public ActionResult preke_nauja()
         {
             return View();
+        }
+        //-----------------------------------------------
+        private is_kpEntities _entities = new is_kpEntities();
+        // GET: preke
+        public ActionResult List_preke()
+        {
+            return View(_entities.Prekes.ToList());
         }
     }
 }

@@ -13,7 +13,6 @@ namespace IS_CS
     {
         protected void Application_Start()
         {
-            Database.SetInitializer <IS_CS.Models.prekeContext>(null);
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
