@@ -17,7 +17,9 @@ namespace IS_CS.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Preke()
         {
+            this.itraukiama_i = new HashSet<itraukiama_i>();
             this.Prekiu_krepselis = new HashSet<Prekiu_krepselis>();
+            this.Prekiu_sarasas = new HashSet<Prekiu_sarasas>();
             this.priklausoes = new HashSet<priklauso>();
         }
     
@@ -29,9 +31,13 @@ namespace IS_CS.Models
         public int fk_Darbuotojaspaskyros_id { get; set; }
     
         public virtual Darbuotoja Darbuotoja { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<itraukiama_i> itraukiama_i { get; set; }
         public virtual Kiekio_tipas Kiekio_tipas1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Prekiu_krepselis> Prekiu_krepselis { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Prekiu_sarasas> Prekiu_sarasas { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<priklauso> priklausoes { get; set; }
     }

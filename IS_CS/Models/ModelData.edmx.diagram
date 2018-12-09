@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a86acc33f3884467acdf9cc5fdf4d011" Name="Diagram1" ZoomLevel="94">
+        <EntityTypeShape EntityType="is_kpModel.Darbuotoja" Width="1.5" PointX="0.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="is_kpModel.Gedima" Width="1.5" PointX="16" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="is_kpModel.Gedimo_busena" Width="1.5" PointX="13.75" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="is_kpModel.Grazinima" Width="1.5" PointX="13.5" PointY="19.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="is_kpModel.Grazinimo_busena" Width="1.5" PointX="11.25" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="is_kpModel.Grazinimo_busenos" Width="1.5" PointX="9" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="is_kpModel.Grazinimo_priezastis" Width="1.5" PointX="11.25" PointY="21.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="is_kpModel.Irenginio_busena" Width="1.5" PointX="11.5" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="is_kpModel.Israsa" Width="1.5" PointX="12.75" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="is_kpModel.itraukiama_i" Width="1.5" PointX="8.25" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="is_kpModel.Kategorija" Width="1.5" PointX="6.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="is_kpModel.Kiekio_tipas" Width="1.5" PointX="3.75" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="is_kpModel.Klienta" Width="1.5" PointX="10.5" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="is_kpModel.Mokejimo_budas" Width="1.5" PointX="13.5" PointY="23.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="is_kpModel.Patvirtinima" Width="1.5" PointX="3" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="is_kpModel.Preke" Width="1.5" PointX="6" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="is_kpModel.Prekiu_krepselis" Width="1.5" PointX="8.25" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="is_kpModel.Prekiu_sarasas" Width="1.5" PointX="11.25" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="is_kpModel.priklauso" Width="1.5" PointX="8.25" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="is_kpModel.Pristatymo_budai" Width="1.5" PointX="13.5" PointY="26.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="is_kpModel.Remontuojamas_irenginys" Width="1.5" PointX="13.75" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="is_kpModel.Saskaita" Width="1.5" PointX="3" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="is_kpModel.Uzsakyma" Width="1.5" PointX="15.75" PointY="14.375" IsExpanded="true" />
+        <AssociationConnector Association="is_kpModel.israso" ManuallyRouted="false" />
+        <AssociationConnector Association="is_kpModel.patvirtina" ManuallyRouted="false" />
+        <AssociationConnector Association="is_kpModel.perziuri" ManuallyRouted="false" />
+        <AssociationConnector Association="is_kpModel.perziurises" ManuallyRouted="false" />
+        <AssociationConnector Association="is_kpModel.tvirtina" ManuallyRouted="false" />
+        <AssociationConnector Association="is_kpModel.FK__Gedimas__busena__2EDAF651" ManuallyRouted="false" />
+        <AssociationConnector Association="is_kpModel.turis" ManuallyRouted="false" />
+        <AssociationConnector Association="is_kpModel.FK__Grazinima__fk_gr__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="is_kpModel.laukia" ManuallyRouted="false" />
+        <AssociationConnector Association="is_kpModel.priklausos" ManuallyRouted="false" />
+        <AssociationConnector Association="is_kpModel.turi" ManuallyRouted="false" />
+        <AssociationConnector Association="is_kpModel.FK__Grazinimo__fk_gr__34C8D9D1" ManuallyRouted="false" />
+        <AssociationConnector Association="is_kpModel.FK__Remontuoj__busen__25518C17" ManuallyRouted="false" />
+        <AssociationConnector Association="is_kpModel.siunciama" ManuallyRouted="false" />
+        <AssociationConnector Association="is_kpModel.sudaromas" ManuallyRouted="false" />
+        <AssociationConnector Association="is_kpModel.itraukiama" ManuallyRouted="false" />
+        <AssociationConnector Association="is_kpModel.FK__Preke__kiekio_ti__37A5467C" ManuallyRouted="false" />
+        <AssociationConnector Association="is_kpModel.pateikia" ManuallyRouted="false" />
+        <AssociationConnector Association="is_kpModel.perziuris" ManuallyRouted="false" />
+        <AssociationConnector Association="is_kpModel.perziurisis" ManuallyRouted="false" />
+        <AssociationConnector Association="is_kpModel.pristato" ManuallyRouted="false" />
+        <AssociationConnector Association="is_kpModel.FK__Uzsakymas__mokej__75A278F5" ManuallyRouted="false" />
+        <AssociationConnector Association="is_kpModel.FK__Prekiu_kr__fk_Pr__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="is_kpModel.ineina" ManuallyRouted="false" />
+        <AssociationConnector Association="is_kpModel.priklausyti" ManuallyRouted="false" />
+        <AssociationConnector Association="is_kpModel.priskiriamas" ManuallyRouted="false" />
+        <AssociationConnector Association="is_kpModel.itraukia" ManuallyRouted="false" />
+        <AssociationConnector Association="is_kpModel.itraukiamas" ManuallyRouted="false" />
+        <AssociationConnector Association="is_kpModel.itraukiamasas" ManuallyRouted="false" />
+        <AssociationConnector Association="is_kpModel.priklausosis" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

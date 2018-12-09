@@ -14,7 +14,16 @@ namespace IS_CS.Models
     
     public partial class Grazinimo_priezastis
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Grazinimo_priezastis()
+        {
+            this.Grazinimas = new HashSet<Grazinima>();
+        }
+    
         public int id_Grazinimo_priezastis { get; set; }
         public string name { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Grazinima> Grazinimas { get; set; }
     }
 }

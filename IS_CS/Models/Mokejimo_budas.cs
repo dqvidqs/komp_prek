@@ -14,7 +14,16 @@ namespace IS_CS.Models
     
     public partial class Mokejimo_budas
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Mokejimo_budas()
+        {
+            this.Uzsakymas = new HashSet<Uzsakyma>();
+        }
+    
         public int id_Mokejimo_budas { get; set; }
         public string name { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Uzsakyma> Uzsakymas { get; set; }
     }
 }

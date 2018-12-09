@@ -14,7 +14,16 @@ namespace IS_CS.Models
     
     public partial class Irenginio_busena
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Irenginio_busena()
+        {
+            this.Remontuojamas_irenginys = new HashSet<Remontuojamas_irenginys>();
+        }
+    
         public int id_Irenginio_busena { get; set; }
         public string name { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Remontuojamas_irenginys> Remontuojamas_irenginys { get; set; }
     }
 }

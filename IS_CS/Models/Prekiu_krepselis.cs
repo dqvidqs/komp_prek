@@ -14,10 +14,21 @@ namespace IS_CS.Models
     
     public partial class Prekiu_krepselis
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Prekiu_krepselis()
+        {
+            this.Klientas = new HashSet<Klienta>();
+            this.Uzsakymas = new HashSet<Uzsakyma>();
+        }
+    
         public int prekiu_krepselio_id { get; set; }
         public int kiekis { get; set; }
         public int fk_Prekebar_kodas { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Klienta> Klientas { get; set; }
         public virtual Preke Preke { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Uzsakyma> Uzsakymas { get; set; }
     }
 }

@@ -14,9 +14,18 @@ namespace IS_CS.Models
     
     public partial class Pristatymo_budai
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Pristatymo_budai()
+        {
+            this.Uzsakymas = new HashSet<Uzsakyma>();
+        }
+    
         public int pristatymo_id { get; set; }
         public string pavadinimas { get; set; }
         public double kaina { get; set; }
         public string trukme { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Uzsakyma> Uzsakymas { get; set; }
     }
 }

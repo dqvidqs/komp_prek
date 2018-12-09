@@ -17,7 +17,11 @@ namespace IS_CS.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Darbuotoja()
         {
+            this.Saskaitas = new HashSet<Saskaita>();
+            this.Remontuojamas_irenginys = new HashSet<Remontuojamas_irenginys>();
             this.Prekes = new HashSet<Preke>();
+            this.Uzsakymas = new HashSet<Uzsakyma>();
+            this.Patvirtinimas = new HashSet<Patvirtinima>();
         }
     
         public int paskyros_id { get; set; }
@@ -29,6 +33,14 @@ namespace IS_CS.Models
         public string tel_nr { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Saskaita> Saskaitas { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Remontuojamas_irenginys> Remontuojamas_irenginys { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Preke> Prekes { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Uzsakyma> Uzsakymas { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Patvirtinima> Patvirtinimas { get; set; }
     }
 }

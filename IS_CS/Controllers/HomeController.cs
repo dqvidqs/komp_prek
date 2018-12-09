@@ -80,7 +80,7 @@ namespace IS_CS.Controllers
             return View();
         }
         //-----------------------------------------------
-        private is_kpEntities _entities = new is_kpEntities();
+        private is_kpEntities1 _entities = new is_kpEntities1();
         // GET: preke
         public ActionResult List_preke()
         {

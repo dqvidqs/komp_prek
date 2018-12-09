@@ -14,7 +14,16 @@ namespace IS_CS.Models
     
     public partial class Gedimo_busena
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Gedimo_busena()
+        {
+            this.Gedimas = new HashSet<Gedima>();
+        }
+    
         public int id_Gedimo_busena { get; set; }
         public string name { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Gedima> Gedimas { get; set; }
     }
 }
